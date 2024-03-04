@@ -22,7 +22,7 @@
             const weightInput = document.getElementById('weight');
             const addRepetitionButton = document.getElementById('addRepetition');
             const resetButton = document.getElementById('reset');
-            const menuButton = document.getElementById('menu');
+            const menuButton = document.getElementById('index');
 
             addRepetitionButton.addEventListener('click', function() {
                 repetitions++;
