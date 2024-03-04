@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Repetition Exercise</title>
+</head>
+<body>
+    <div id="repetitionExercise">
+        <h2>Push-ups</h2>
+        <p id="repetitions">Repetitions: 0</p>
+        <button id="addRepetition">Add Repetition</button>
+        <button id="reset">Reset</button>
+        <button id="menu">Menu</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            let repetitions = 0;
+
+            const repetitionsDisplay = document.getElementById('repetitions');
+            const addRepetitionButton = document.getElementById('addRepetition');
+            const resetButton = document.getElementById('reset');
+            const menuButton = document.getElementById('menu');
+
+            addRepetitionButton.addEventListener('click', function() {
+                repetitions++;
+                repetitionsDisplay.textContent = `Repetitions: ${repetitions}`;
+            });
+
+            resetButton.addEventListener('click', function() {
+                repetitions = 0;
+                repetitionsDisplay.textContent = `Repetitions: ${repetitions}`;
+            });
+
+            menuButton.addEventListener('click', function() {
+            });
+        });
+    </script>
+</body>
+</html>

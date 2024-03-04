@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Duration Exercise</title>
+</head>
+<body>
+    <div id="durationExercise">
+        <h2>Running</h2>
+        <p id="duration">Duration: 0 seconds</p>
+        <button id="startTimer">Start Timer</button>
+        <button id="resetTimer">Reset Timer</button>
+        <button id="menu">Menu</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            let timerRunning = false;
+            let duration = 0;
+            let intervalId;
+
+            const durationDisplay = document.getElementById('duration');
+            const startTimerButton = document.getElementById('startTimer');
+            const resetTimerButton = document.getElementById('resetTimer');
+            const menuButton = document.getElementById('menu');
+
+            startTimerButton.addEventListener('click', function() {
+                timerRunning = true;
+                intervalId = setInterval(() => {
+                    duration++;
+                    durationDisplay.textContent = `Duration: ${duration} seconds`;
+                }, 1000);
+            });
+
+            resetTimerButton.addEventListener('click', function() {
+                clearInterval(intervalId);
+                timerRunning = false;
+                duration = 0;
+                durationDisplay.textContent = `Duration: ${duration} seconds`;
+            });
+
+            menuButton.addEventListener('click', function() {
+            });
+        });
+    </script>
+</body>
+</html>

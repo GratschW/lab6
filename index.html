@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <body>
-  <div id="root"></div>
-  <script src="App.js"></script>
+    <title>Exercise Selection</title>
+</head>
+<body>
+    <div id="exerciseSelection">
+        <h2>Exercises</h2>
+        <button id="pushUps">Push Ups</button>
+        <button id="running">Running</button>
+        <button id="benchPress">Bench Press</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pushUpsButton = document.getElementById('pushUps');
+            const runningButton = document.getElementById('running');
+            const benchPressButton = document.getElementById('benchPress');
+
+            pushUpsButton.addEventListener('click', function() {
+                window.location.href = 'repetition2.html';
+            });
+
+            runningButton.addEventListener('click', function() {
+                window.location.href = 'duration2.html';
+            });
+
+            benchPressButton.addEventListener('click', function() {
+                window.location.href = 'bench2.html';
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
 
