@@ -10,7 +10,7 @@
         <p>Weight: <input type="number" id="weight" value="0" /></p>
         <button id="addRepetition">Add Repetition</button>
         <button id="reset">Reset</button>
-        <button id="menu">Menu</button>
+        <button id="index">Menu</button>
     </div>
 
     <script>
